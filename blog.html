@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+
+<body>
+    <div>
+        <h1>Difference between Local Storage and Session Storage </h1>
+        <p> <strong>Local Storage:</strong> This read-only interface property provides access to the Document’s local
+            storage object, the
+            stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets
+            cleared when the page session ends – that is when the page is closed. It is cleared when the last “private”
+            tab
+            of a browser is closed (localStorage data for a document loaded in a private browsing or incognito session).
+
+            DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character. Strings
+            are
+            automatically generated from integer keys just as they are for objects. The data stored in LocalStorage is
+            specific to a protocol in the document. If the site is loaded over HTTP (e.g., http://example.com),
+            localStorage
+            returns a different object than if it is loaded over HTTPS (e.g., https://abc.com).
+
+            If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of
+            being
+            loaded from the server) the requirements for behavior are undefined and may vary among different browsers.
+            Each
+            file appears to be returned a different object by localStorage in all current browsers: URL. Essentially, it
+            seems to be a case of each URL: file having its own unique local storage area.
+
+
+            This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain unclear. As
+            such, there’s a possibility that browsers may change how they handle files at any time. The way some
+            browsers
+            handle it has evolved.
+
+            Local storage has 4 methods:</br></br>
+
+            <strong>setItem() Method</strong> – This method takes two parameters one is key and another one is value. It
+            is used to store
+            the value in a particular location with the name of the key.</br>
+            localStorage.setItem(key, value)</br></br>
+            <strong>getItem() Method</strong> – This method takes one parameter that is key which is used to get the
+            value stored with a
+            particular key name.</br>
+            localStorage.getItem(key)</br></br>
+            <strong>removeItem() Method</strong> – This is method is used to remove the value stored in the memory in
+            reference to
+            key.</br>
+            localStorage.removeItem(key)</br></br>
+            <strong>clear() Method</strong> – This method is used to clear all the values stored in localstorage.</br>
+            localStorage.clear()
+        </p>
+        <p>
+            <strong> Session Storage:</strong> Session Storage objects can be accessed using the sessionStorage
+            read-only property. The difference between
+            sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is
+            cleared when the page session ends. A unique page session gets created once a document is loaded in a
+            browser tab. Page sessions are valid for only one tab at a time. Pages are only saved for the amount of time
+            that the tab or the browser is open; they do not persist after the page reloads and restores. A new session
+            is created each time a tab or window is opened; this is different from session cookies. Each tab/window that
+            is opened with the same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage from
+            the original tab is copied to the duplicated tab. Closing a window/tab ends the session and clears
+            sessionStorage objects.
+
+            A page’s protocol determines what data is stored in sessionStorage. Particularly, data stored by scripts
+            accessed through HTTP (for example, http://abc.com) is stored in a separate object from the same site
+            accessed through HTTPS (for instance, https://abc.com). A DOMString number is two bytes per character in
+            UTF-16 DOMString format. Strings are automatically generated from integer keys just as they are for objects.
+
+            Session Storage has 4 methods: <br><br>
+
+            <strong>setItem() Method </strong> – This method takes two parameters one is key and another one is value.
+            It is used to store
+            the value in a particular location with the name of the key.<br>
+            sessionStorage.setItem(key, value)<br><br>
+            <strong>getIteam() Method</strong> – This method takes one parameter that is key which is used to get the
+            value stored with a
+            particular key name.<br>
+            sessionStorage.getItem(key)<br><br>
+            <strong>removeItem() Method </strong> – This is method is used to remove the value stored in the memory in
+            reference to
+            key.<br>
+            sessionStorage.removeItem(key)<br><br>
+            <strong>clear() Method </strong> – This method is used to clear all the values stored in the session
+            storage. <br>
+            sessionStorage.clear()<br><br>
+        </p>
+    </div>
+    <div>
+        <h1>Difference between global scope and block scope?</h1>
+
+        <p>
+            <strong>Function Scope </strong> : When a variable is declared inside a function, it is only accessible
+            within that function and cannot be used outside that function. <br>
+
+            <strong>Block Scope </strong> : A variable when declared inside the if or switch conditions or inside for or
+            while loops, are accessible within that particular condition or loop.
+        </p>
+    </div>
+    <div>
+        <h1> How does javascript event loop work ?</h1>
+        <p>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is
+            empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which
+            effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
+    </div>
+
+    <div>
+        <h1></h1>
+        <p>
+            The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive
+            types. <br> <br>
+
+            Property attributes of undefined: <br>
+            <strong>Writable </strong> - no. <br>
+            <strong>Enumerable </strong> - no. <br>
+            <strong>Configurable </strong> - no. <br>
+        </p>
+    </div>
+
+</body>
+
+</html>
